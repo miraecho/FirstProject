@@ -7,7 +7,9 @@ using UnityEngine.SceneManagement;
 public class LogicScript : MonoBehaviour
 {
     public int playerScore;
+    public int highScore;
     public Text scoreText;
+    public Text highScoreText;
     public GameObject gameOverScreen;
 
     [ContextMenu("Increase Score")]
@@ -15,6 +17,8 @@ public class LogicScript : MonoBehaviour
     {
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
+        highScore += playerScore;
+        highScoreText.text = highScore.ToString();
     }
 
     public void restartGame() 
@@ -26,4 +30,5 @@ public class LogicScript : MonoBehaviour
     {
         gameOverScreen.SetActive(true);
     }
+
 }
