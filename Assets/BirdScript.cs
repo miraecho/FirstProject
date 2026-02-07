@@ -8,6 +8,12 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,6 +28,7 @@ public class BirdScript : MonoBehaviour
         {
             myRigidbody.linearVelocity = Vector2.up * flapStrength;
         }
+        audioManager.PlaySFX(audioManager.pipeSpawnFX);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
