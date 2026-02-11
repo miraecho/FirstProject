@@ -11,14 +11,29 @@ public class LogicScript : MonoBehaviour
     public Text scoreText;
     public Text highScoreText;
     public GameObject gameOverScreen;
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+    private void Start()
+    {
+        PlayerPrefs.SetInt("High Score", playerScore);
+    }
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
-        highScore += playerScore;
-        highScoreText.text = highScore.ToString();
+        audioManager.PlaySFX(audioManager.pipeSpawnFX);
+        if (playerScore > highScore) 
+        {
+            highScore = PlayerPrefs.GetInt("High Score", playerScore);
+            Debug.Log(highScore.ToString());
+            //highScoreText.text = highScore.ToString();
+        }
     }
 
     public void restartGame() 
