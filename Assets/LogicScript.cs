@@ -19,7 +19,8 @@ public class LogicScript : MonoBehaviour
 
     private void Start()
     {
-        PlayerPrefs.SetInt("High Score", playerScore);
+        highScore = PlayerPrefs.GetInt("High Score");
+        highScoreText.text = highScore.ToString();
     }
 
     [ContextMenu("Increase Score")]
@@ -30,9 +31,10 @@ public class LogicScript : MonoBehaviour
         audioManager.PlaySFX(audioManager.pipeSpawnFX);
         if (playerScore > highScore) 
         {
-            highScore = PlayerPrefs.GetInt("High Score", playerScore);
+            highScore = playerScore;
+            PlayerPrefs.SetInt("High Score", highScore);
             Debug.Log(highScore.ToString());
-            //highScoreText.text = highScore.ToString();
+            highScoreText.text = highScore.ToString();
         }
     }
 

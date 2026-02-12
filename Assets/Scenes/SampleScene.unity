@@ -588,6 +588,7 @@ MonoBehaviour:
   SFXSource: {fileID: 376064692}
   background: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
   pipeSpawnFX: {fileID: 8300000, guid: 4d24975329921423b9c49a8807c8f508, type: 3}
+  collisionFX: {fileID: 8300000, guid: e1a75776f005439469f89a17a986c567, type: 3}
 --- !u!4 &710171597
 Transform:
   m_ObjectHideFlags: 0
@@ -1394,7 +1395,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 68
+    m_FontSize: 76
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1448,8 +1449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 757, y: 459}
-  m_SizeDelta: {x: 115.97, y: 173.5}
+  m_AnchoredPosition: {x: 801, y: 459}
+  m_SizeDelta: {x: 209.6, y: 173.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952453567
 MonoBehaviour:
