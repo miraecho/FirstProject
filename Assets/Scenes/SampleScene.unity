@@ -317,7 +317,11 @@ MonoBehaviour:
   playerScore: 0
   highScore: 0
   scoreText: {fileID: 1127176851}
+<<<<<<< Updated upstream
   highScoreText: {fileID: 1952453567}
+=======
+  highScoreText: {fileID: 0}
+>>>>>>> Stashed changes
   gameOverScreen: {fileID: 187813519}
 --- !u!4 &473273733
 Transform:
@@ -1395,7 +1399,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+<<<<<<< Updated upstream
     m_FontSize: 76
+=======
+    m_FontSize: 68
+>>>>>>> Stashed changes
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -1449,8 +1457,13 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
+<<<<<<< Updated upstream
   m_AnchoredPosition: {x: 801, y: 459}
   m_SizeDelta: {x: 209.6, y: 173.5}
+=======
+  m_AnchoredPosition: {x: 757, y: 459}
+  m_SizeDelta: {x: 115.97, y: 173.5}
+>>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952453567
 MonoBehaviour:
